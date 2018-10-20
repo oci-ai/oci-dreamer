@@ -1,0 +1,8 @@
+*.bak
+*.zip
+*.tgz
+*.tar
+*.bz2
+node_modules
+.ipynb_checkpoints/
+tmp.prototxt
