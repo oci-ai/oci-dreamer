@@ -11,6 +11,8 @@ RUN /opt/caffe/scripts/download_model_binary.py /opt/caffe/models/bvlc_googlenet
 # Include all of the notebooks
 COPY *.ipynb /home/jovyan/
 
+COPY src/*.py /app/
+
 COPY images /home/jovyan/images/
 
 WORKDIR /home/jovyan

@@ -3,10 +3,14 @@
 *.tgz
 *.tar
 *.bz2
+.*.swp
 venv
 node_modules
+frames
+results
 .ipynb_checkpoints/
 tmp.prototxt
+.DS_Store
 
 
 # Created by https://www.gitignore.io/api/phpstorm
