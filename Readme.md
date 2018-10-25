@@ -74,7 +74,7 @@ To execute the container to allow access to the *dream.ipynb* notebook,
 use the following `bash` command:
 
 ```bash
-docker run -d -v $(pwd):/home/jovyan/local -p 2112:8888 --name notebook notebook
+docker run -d --rm -v $(pwd):/home/jovyan/local -p 2112:8888 --name notebook notebook
 ```
 
 This will start a `jupyter` notebook server with the local directory
@@ -103,7 +103,7 @@ You can execute the *dream.py* script from the command line by
 executing the following `bash` command:
  
 ```bash
-docker run -v $(pwd):/home/jovyan/local --name dream-generator oci-dream-nb python /app/dream.py --image local/images/sky1024px.jpg -o local/frames
+docker run -it --rm -v $(pwd):/home/jovyan/local --name dream-generator oci-dream-nb python /app/dream.py --image local/images/sky1024px.jpg -o local/frames
 ```
 
 Note that the local direcory is mounted in the container at
