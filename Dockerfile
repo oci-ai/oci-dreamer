@@ -19,6 +19,8 @@ WORKDIR /home/jovyan
 
 EXPOSE 8888
 
+RUN jupyter trust /home/jovyan/dream.ipynb
+
 # Note that we starte in background and have a default access token (login password) of 'demo'
 CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token='demo'
 
