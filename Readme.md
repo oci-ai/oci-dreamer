@@ -78,7 +78,18 @@ docker run -d -v $(pwd):/home/jovyan/local -p 2112:8888 --name notebook notebook
 ```
 
 This will start a `jupyter` notebook server with the local directory
-mounted in the `jupyter` directory named `local`.
+mounted in the `jupyter` directory named `local`.  When stopping or
+killing a notebook container, remember to remove it from the docker
+engine if you want to restart another container with the same name.
+
+Access the notebook by pointing you browser at *http://localhost:2112/* and
+entering the code `demo` when asked for a token.  This will give you
+access to the installed notebooks and images as well as the mounted
+directories on the host.  If you want to save the results of your
+notebook exploration beyond the current session, you will want to
+create / copy your notebooks in / to the *local* subdirectory which
+is mounted from the host so that any saved results will be retained
+after the notebook and docker execution have completed.
 
 ### Running Command Line
 
